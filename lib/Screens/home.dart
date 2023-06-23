@@ -34,12 +34,16 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Container(
           padding: EdgeInsets.all(20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text("Email Id : " + auth.currentUser!.email!),
+              SizedBox(
+                height: 20,
+              ),
               Text("Available Recipe"),
-              // ExpansionTile(
-              //   title: Text("name"),
-              //   children: [Text("recipee")],
-              // ),
+              SizedBox(
+                height: 10,
+              ),
               Expanded(
                   child: StreamBuilder(
                 stream: FirebaseFirestore.instance
